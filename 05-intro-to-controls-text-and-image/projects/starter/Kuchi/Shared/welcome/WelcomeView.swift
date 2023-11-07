@@ -50,13 +50,17 @@ struct WelcomeView: View {
                   .background(Color(white: 0.9))
                   .clipShape(Circle())
                   .foregroundColor(.red)
-
-                Text("Welcome to Kuchi")
-                  .font(.system(size: 30))
-                  .bold()
-                  .foregroundColor(.red)
-                  .lineLimit(2)
-                  .multilineTextAlignment(.center)
+                VStack(alignment: .leading) {
+                    Text("Welcome to")
+                      .font(.headline)
+                      .bold()
+                    Text("Kuchi")
+                      .font(.largeTitle)
+                      .bold()
+                }
+                .foregroundColor(.red)
+                .lineLimit(1)
+                .padding(.horizontal)
             }
         }
     }
