@@ -31,6 +31,8 @@
 		B68BBFC02AFA5CEA0052194B /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */; };
 		B68BBFC22AFA5D700052194B /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC12AFA5D700052194B /* LogoImage.swift */; };
 		B68BBFC32AFA5D700052194B /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC12AFA5D700052194B /* LogoImage.swift */; };
+		B68BBFC52AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */; };
+		B68BBFC62AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,7 @@
 		57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
 		B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
 		B68BBFC12AFA5D700052194B /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 			children = (
 				B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */,
 				B68BBFC12AFA5D700052194B /* LogoImage.swift */,
+				B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -270,6 +274,7 @@
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB8298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98B26EA1BE30009C09F /* WelcomeView.swift in Sources */,
+				B68BBFC52AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */,
 				B68BBFC22AFA5D700052194B /* LogoImage.swift in Sources */,
 				57F8DD6926EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				57349BBA298132EB00BA0ACF /* Settings.swift in Sources */,
@@ -286,6 +291,7 @@
 				57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB9298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98C26EA1BE30009C09F /* WelcomeView.swift in Sources */,
+				B68BBFC62AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */,
 				B68BBFC32AFA5D700052194B /* LogoImage.swift in Sources */,
 				57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				57349BBB298132EB00BA0ACF /* Settings.swift in Sources */,
