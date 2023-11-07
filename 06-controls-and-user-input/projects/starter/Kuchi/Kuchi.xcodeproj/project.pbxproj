@@ -27,6 +27,10 @@
 		57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF340024E89F91004ABEB2 /* KuchiApp.swift */; };
 		57F8DD6926EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
 		57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
+		B68BBFBF2AFA5CEA0052194B /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */; };
+		B68BBFC02AFA5CEA0052194B /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */; };
+		B68BBFC22AFA5D700052194B /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC12AFA5D700052194B /* LogoImage.swift */; };
+		B68BBFC32AFA5D700052194B /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC12AFA5D700052194B /* LogoImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,8 @@
 		57EF341124E89F92004ABEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EF341224E89F92004ABEB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
+		B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		B68BBFC12AFA5D700052194B /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		579CB98926EA18AA0009C09F /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				B68BBFBD2AFA5CBC0052194B /* components */,
 				579CB98A26EA1BE30009C09F /* WelcomeView.swift */,
 				57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */,
 			);
@@ -148,6 +155,15 @@
 				57EF341224E89F92004ABEB2 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		B68BBFBD2AFA5CBC0052194B /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */,
+				B68BBFC12AFA5D700052194B /* LogoImage.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +270,11 @@
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB8298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98B26EA1BE30009C09F /* WelcomeView.swift in Sources */,
+				B68BBFC22AFA5D700052194B /* LogoImage.swift in Sources */,
 				57F8DD6926EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				57349BBA298132EB00BA0ACF /* Settings.swift in Sources */,
 				57349BB6298132EB00BA0ACF /* UserManager.swift in Sources */,
+				B68BBFBF2AFA5CEA0052194B /* WelcomeBackgroundImage.swift in Sources */,
 				57578FDE24E9D943003465A4 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +286,11 @@
 				57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB9298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98C26EA1BE30009C09F /* WelcomeView.swift in Sources */,
+				B68BBFC32AFA5D700052194B /* LogoImage.swift in Sources */,
 				57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				57349BBB298132EB00BA0ACF /* Settings.swift in Sources */,
 				57349BB7298132EB00BA0ACF /* UserManager.swift in Sources */,
+				B68BBFC02AFA5CEA0052194B /* WelcomeBackgroundImage.swift in Sources */,
 				57578FDF24E9D943003465A4 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
