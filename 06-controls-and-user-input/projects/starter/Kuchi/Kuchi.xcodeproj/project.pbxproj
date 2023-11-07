@@ -33,6 +33,8 @@
 		B68BBFC32AFA5D700052194B /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC12AFA5D700052194B /* LogoImage.swift */; };
 		B68BBFC52AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */; };
 		B68BBFC62AFA5E7F0052194B /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */; };
+		B68BBFC82AFA607B0052194B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC72AFA607B0052194B /* RegisterView.swift */; };
+		B68BBFC92AFA607B0052194B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BBFC72AFA607B0052194B /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		B68BBFBE2AFA5CEA0052194B /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
 		B68BBFC12AFA5D700052194B /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		B68BBFC42AFA5E7F0052194B /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		B68BBFC72AFA607B0052194B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 				B68BBFBD2AFA5CBC0052194B /* components */,
 				579CB98A26EA1BE30009C09F /* WelcomeView.swift */,
 				57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */,
+				B68BBFC72AFA607B0052194B /* RegisterView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -271,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68BBFC82AFA607B0052194B /* RegisterView.swift in Sources */,
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB8298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98B26EA1BE30009C09F /* WelcomeView.swift in Sources */,
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68BBFC92AFA607B0052194B /* RegisterView.swift in Sources */,
 				57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				57349BB9298132EB00BA0ACF /* Profile.swift in Sources */,
 				579CB98C26EA1BE30009C09F /* WelcomeView.swift in Sources */,
