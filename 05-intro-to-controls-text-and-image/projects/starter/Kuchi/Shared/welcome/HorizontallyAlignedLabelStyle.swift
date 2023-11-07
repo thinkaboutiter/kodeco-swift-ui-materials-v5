@@ -32,45 +32,11 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
-    var body: some View {
-        ZStack {
-            Image("welcome-background", bundle: nil)
-                .resizable()
-                .aspectRatio(1 / 1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .saturation(0.5)
-                .blur(radius: 5.0)
-                .opacity(0.1)
-            Label(
-                title: {
-                    VStack(alignment: .leading) {
-                        Text("Welcome to")
-                            .font(.headline)
-                            .bold()
-                        Text("Kuchi")
-                            .font(.largeTitle)
-                            .bold()
-                    }
-                    .foregroundColor(.red)
-                    .lineLimit(1)
-                    .padding(.horizontal)
-                },
-                icon: {
-                    Image(systemName: "table")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-                        .background(Color(white: 0.9))
-                        .clipShape(Circle())
-                        .foregroundColor(.red)
-                }
-            )
-            .labelStyle(HorizontallyAlignedLabelStyle())
+struct HorizontallyAlignedLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack{
+            configuration.icon
+            configuration.title
         }
     }
-}
-
-#Preview {
-    WelcomeView()
 }
