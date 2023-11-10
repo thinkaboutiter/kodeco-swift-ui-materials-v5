@@ -33,13 +33,21 @@
 import SwiftUI
 
 struct RegisterView: View {
+
+    enum Field: Hashable {
+        case name
+    }
+
     @State var name: String = ""
+    @FocusState var focusedField: Field?
 
     var body: some View {
         VStack {
             Spacer()
             WelcomeMessageView()
             TextField("Type your name...", text: $name)
+                .focused($focusedField, equals: .name)
+                .submitLabel(.done)
                 .bordered()
             Spacer()
         }
