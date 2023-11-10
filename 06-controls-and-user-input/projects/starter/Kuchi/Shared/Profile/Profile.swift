@@ -33,8 +33,12 @@
 /// Profile of the learner using the app.
 struct Profile : Codable {
   /// (Selected) name of the learner.
-  var name: String
-  
+    var name: String {
+        didSet {
+           debugPrint("🔧 \(#file) » \(#function) » \(#line)", name, separator: "\n")
+        }
+    }
+
   /// Initializes a new `Profile` with an empty `name`.
   init() {
     self.name = ""
