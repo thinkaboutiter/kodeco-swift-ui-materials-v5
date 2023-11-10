@@ -34,14 +34,14 @@ import SwiftUI
 
 struct RegisterView: View {
 
-    @State var name: String = ""
+    @EnvironmentObject var userManager: UserManager
     @FocusState var nameFieldFocused: Bool
 
     var body: some View {
         VStack {
             Spacer()
             WelcomeMessageView()
-            TextField("Type your name...", text: $name)
+            TextField("Type your name...", text: $userManager.profile.name)
                 .focused($nameFieldFocused)
                 .submitLabel(.done)
                 .bordered()
@@ -58,10 +58,14 @@ struct RegisterView: View {
 
 extension RegisterView {
     func registerUser() {
-        print("Button triggered")
+        userManager.persistProfile()
     }
 }
 
 #Preview {
-    RegisterView()
+    Group {
+        let user = UserManager(name: "Ray")
+        RegisterView()
+            .environmentObject(user)
+    }
 }
