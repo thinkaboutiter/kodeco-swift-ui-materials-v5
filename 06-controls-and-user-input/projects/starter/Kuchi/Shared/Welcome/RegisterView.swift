@@ -45,10 +45,20 @@ struct RegisterView: View {
                 .focused($nameFieldFocused)
                 .submitLabel(.done)
                 .bordered()
+            Button(
+                action: registerUser) {
+                Text("OK")
+            }
             Spacer()
         }
         .padding()
         .background(WelcomeBackgroundImage())
+    }
+}
+
+extension RegisterView {
+    func registerUser() {
+        print("Button triggered")
     }
 }
 
