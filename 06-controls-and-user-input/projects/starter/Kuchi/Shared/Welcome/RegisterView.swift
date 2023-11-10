@@ -57,6 +57,7 @@ struct RegisterView: View {
                         y: 2)
             Spacer()
         }
+        .padding()
         .background(WelcomeBackgroundImage())
     }
 }
