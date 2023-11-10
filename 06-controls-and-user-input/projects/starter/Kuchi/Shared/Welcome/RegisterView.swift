@@ -46,9 +46,17 @@ struct RegisterView: View {
                 .submitLabel(.done)
                 .bordered()
             Button(
-                action: registerUser) {
-                Text("OK")
-            }
+                action: self.registerUser) {
+                    HStack {
+                        Image(systemName: "checkmark")
+                            .resizable()
+                            .frame(width: 16, height: 16, alignment: .center)
+                        Text("OK")
+                            .font(.body)
+                            .bold()
+                    }
+                }
+                .bordered()
             Spacer()
         }
         .padding()
