@@ -58,12 +58,15 @@ final class UserManager: ObservableObject {
     }
     
     func persistProfile() {
+        debugPrint("🔧 \(#file) » \(#function) » \(#line)", separator: "\n")
         if settings.rememberUser {
+            debugPrint("🔧 \(#file) » \(#function) » \(#line)", "profile persisted!", separator: "\n")
             UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: "user-profile")
         }
     }
     
     func persistSettings() {
+        debugPrint("🔧 \(#file) » \(#function) » \(#line)", separator: "\n")
         UserDefaults.standard.set(try? PropertyListEncoder().encode(settings), forKey: "user-settings")
     }
     
@@ -83,6 +86,7 @@ final class UserManager: ObservableObject {
     }
     
     func clear() {
+        debugPrint("🔧 \(#file) » \(#function) » \(#line)", separator: "\n")
         UserDefaults.standard.removeObject(forKey: "user-profile")
     }
     
