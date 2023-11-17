@@ -86,7 +86,7 @@ struct HistoryView: View {
           Text(element.challenge.question)
             .font(.body)
         }
-        
+
         VStack {
           Text("Answer:")
             .font(.caption)
@@ -94,7 +94,7 @@ struct HistoryView: View {
           Text(element.challenge.answer)
             .font(.body)
         }
-        
+
         VStack {
           Text("Guessed")
             .font(.caption)
@@ -110,7 +110,15 @@ struct HistoryView: View {
   }
   
   var body: some View {
-    EmptyView()
+    ScrollView {
+      LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+        Section(header: header) {
+          ForEach(history, id: \.self) { element in
+            getElement(element)
+          }
+        }
+      }
+    }
   }
 }
 
