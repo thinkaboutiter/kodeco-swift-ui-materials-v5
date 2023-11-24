@@ -112,3 +112,25 @@ struct RegisterView_Previews: PreviewProvider {
       .environmentObject(user)
   }
 }
+
+//struct RegisterView: View {
+//  @State var name: String = ""
+//
+//  var body: some View {
+//    VStack {
+//      TextField("Type your name...", text: $name)
+//        .bordered()
+//      if name.count >= 3 {
+//        Text(name)
+//      }
+//    }
+//    .padding()
+//    .background(WelcomeBackgroundImage())
+//  }
+//}
+//
+//struct RegisterView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    RegisterView()
+//  }
+//}
