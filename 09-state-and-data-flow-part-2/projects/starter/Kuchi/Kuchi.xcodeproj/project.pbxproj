@@ -64,7 +64,7 @@
 		5709633529927F0800F42928 /* ChoicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ChoicesView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		5709633629927F0800F42928 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		5709633729927F0800F42928 /* CongratulationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; tabWidth = 2; };
-		5709633829927F0800F42928 /* ChallengesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewModel.swift; sourceTree = "<group>"; };
+		5709633829927F0800F42928 /* ChallengesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ChallengesViewModel.swift; sourceTree = "<group>"; tabWidth = 2; };
 		5709633929927F0800F42928 /* PracticeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		5709633A29927F0800F42928 /* ChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		5709633B29927F0800F42928 /* ChoicesRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesRow.swift; sourceTree = "<group>"; };

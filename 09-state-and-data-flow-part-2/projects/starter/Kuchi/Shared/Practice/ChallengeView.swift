@@ -38,6 +38,7 @@ struct ChallengeView: View {
   @State var showAnswers = false
   @Binding var numberOfAnswered: Int
   @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+  @Environment(\.questionsPerSession) var questionsPerSession: Int
 
   var body: some View {
     // 1 - Here, you check if the vertical class is compact. If it is, it means the device is in landscape mode.
@@ -58,7 +59,7 @@ struct ChallengeView: View {
           }
         }
         ScoreView(
-          numberOfQuestions: 5,
+          numberOfQuestions: questionsPerSession,
           numberOfAnswered: $numberOfAnswered
         )
       }
@@ -73,7 +74,7 @@ struct ChallengeView: View {
             .frame(height: 300)
         }
         ScoreView(
-          numberOfQuestions: 5,
+          numberOfQuestions: questionsPerSession,
           numberOfAnswered: $numberOfAnswered
         )
         if showAnswers {
