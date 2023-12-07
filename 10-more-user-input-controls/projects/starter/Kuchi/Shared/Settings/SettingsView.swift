@@ -33,6 +33,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+  @State var numberOfQuestions = 6
+
   var body: some View {
     List {
       Text("Settings")
@@ -42,6 +44,16 @@ struct SettingsView: View {
       }
 
       Section(header: Text("Game")) {
+        VStack(alignment: .leading) {
+          Stepper(
+            "Number of Questions: \(numberOfQuestions)",
+            value: $numberOfQuestions,
+            in: 3 ... 20
+          )
+          Text("Any change will affect the next game")
+            .font(.caption2)
+            .foregroundColor(.secondary)
+        }
       }
 
       Section(header: Text("Notifications")) {
