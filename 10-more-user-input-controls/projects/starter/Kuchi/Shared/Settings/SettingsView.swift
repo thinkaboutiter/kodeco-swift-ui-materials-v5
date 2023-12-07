@@ -63,17 +63,12 @@ struct SettingsView: View {
 
       Section(header: Text("Notifications")) {
         HStack {
-          Toggle("Daily Reminder",
-                 isOn: Binding(
-                  get: {
-                    dailyReminderEnabled
-                  },
-                  set: { newValue in
-                    dailyReminderEnabled = newValue
-                    configureNotification()
-                  }
-                 )
-          )
+          Toggle("Daily Reminder", isOn: $dailyReminderEnabled)
+            .onChange(
+              of: dailyReminderEnabled,
+              perform: { _ in
+                configureNotification()
+              })
           DatePicker(
             // no need for label
             "",
@@ -81,6 +76,11 @@ struct SettingsView: View {
             displayedComponents: .hourAndMinute
           )
           .disabled(dailyReminderEnabled == false)
+          .onChange(
+            of: dailyReminderTime,
+            perform: { _ in
+              configureNotification()
+          })
         }
       }
     }
