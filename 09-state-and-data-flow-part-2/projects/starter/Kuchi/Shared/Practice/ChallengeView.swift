@@ -37,24 +37,51 @@ struct ChallengeView: View {
   
   @State var showAnswers = false
   @Binding var numberOfAnswered: Int
+  @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
 
   var body: some View {
-    VStack {
-      Button(action: {
-        showAnswers.toggle()
-      }) {
-        QuestionView(question: challengeTest.challenge.question)
-          .frame(height: 300)
+    // 1 - Here, you check if the vertical class is compact. If it is, it means the device is in landscape mode.
+    if verticalSizeClass == .compact {
+      // 2 - This is the view implementation for the landscape mode. You use the vertical stack to display ScoreView at the bottom.
+      VStack {
+        // 3 - The horizontal stack just shows QuestionView and ChoicesView next to one another.
+        HStack {
+          Button(action: {
+            showAnswers = !showAnswers
+          }) {
+            QuestionView(
+              question: challengeTest.challenge.question)
+          }
+          if showAnswers {
+            Divider()
+            ChoicesView(challengeTest: challengeTest)
+          }
+        }
+        ScoreView(
+          numberOfQuestions: 5,
+          numberOfAnswered: $numberOfAnswered
+        )
       }
-      
-      ScoreView(numberOfQuestions: 5,
-                numberOfAnswered: $numberOfAnswered)
-
-      if showAnswers {
-        Divider()
-        ChoicesView(challengeTest: challengeTest)
-          .frame(height: 300)
-          .padding()
+    } else {
+      // 4 - This is the previous implementation, which is still good for portrait layout.
+      VStack {
+        Button(action: {
+          showAnswers = !showAnswers
+        }) {
+          QuestionView(
+            question: challengeTest.challenge.question)
+            .frame(height: 300)
+        }
+        ScoreView(
+          numberOfQuestions: 5,
+          numberOfAnswered: $numberOfAnswered
+        )
+        if showAnswers {
+          Divider()
+          ChoicesView(challengeTest: challengeTest)
+            .frame(height: 300)
+            .padding()
+        }
       }
     }
   }
