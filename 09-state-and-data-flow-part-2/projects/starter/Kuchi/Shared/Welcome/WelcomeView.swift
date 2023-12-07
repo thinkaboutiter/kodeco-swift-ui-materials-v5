@@ -41,7 +41,8 @@ struct WelcomeView: View {
     if showPractice {
       PracticeView(
         challengeTest: $challengesViewModel.currentChallenge,
-        userName: $userManager.profile.name
+        userName: $userManager.profile.name,
+        numberOfAnswered: .constant(challengesViewModel.numberOfAnswered)
       )
     } else {
       ZStack {
