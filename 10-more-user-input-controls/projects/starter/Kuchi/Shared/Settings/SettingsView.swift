@@ -34,7 +34,19 @@ import SwiftUI
 
 struct SettingsView: View {
   var body: some View {
-    Text("Hello, World!")
+    List {
+      Text("Settings")
+        .font(.largeTitle)
+        .padding(.bottom, 8)
+      Section(header: Text("Appearance")) {
+      }
+
+      Section(header: Text("Game")) {
+      }
+
+      Section(header: Text("Notifications")) {
+      }
+    }
   }
 }
 
