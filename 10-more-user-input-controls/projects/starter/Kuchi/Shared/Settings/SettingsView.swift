@@ -63,14 +63,34 @@ struct SettingsView: View {
 
       Section(header: Text("Notifications")) {
         HStack {
-          Toggle("Daily Reminder", isOn: $dailyReminderEnabled)
+          Toggle("Daily Reminder",
+                 isOn: Binding(
+                  get: {
+                    dailyReminderEnabled
+                  },
+                  set: { newValue in
+                    dailyReminderEnabled = newValue
+                    configureNotification()
+                  }
+                 )
+          )
           DatePicker(
             // no need for label
             "",
-            selection: $dailyReminderTime
+            selection: $dailyReminderTime,
+            displayedComponents: .hourAndMinute
           )
+          .disabled(dailyReminderEnabled == false)
         }
       }
+    }
+  }
+
+  private func configureNotification() {
+    if dailyReminderEnabled {
+      LocalNotifications.shared.createReminder(time: dailyReminderTime)
+    } else {
+      LocalNotifications.shared.deleteReminder()
     }
   }
 }
