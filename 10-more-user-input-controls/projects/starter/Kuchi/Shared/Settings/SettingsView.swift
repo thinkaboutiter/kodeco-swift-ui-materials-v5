@@ -33,12 +33,16 @@
 import SwiftUI
 
 struct SettingsView: View {
-  @State var numberOfQuestions: Int = 6
+
+  @EnvironmentObject
+  var challengesViewModel: ChallengesViewModel
+
   @State var learningEnabled: Bool = true
   @State var dailyReminderEnabled: Bool = false
   @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
   @State var cardBackgroundColor: Color = .red
-  @State var appearance: Appearance = .automatic
+  @AppStorage("appearance")
+  var appearance: Appearance = .automatic
 
   var body: some View {
     List {
@@ -64,8 +68,8 @@ struct SettingsView: View {
       Section(header: Text("Game")) {
         VStack(alignment: .leading) {
           Stepper(
-            "Number of Questions: \(numberOfQuestions)",
-            value: $numberOfQuestions,
+            "Number of Questions: \(challengesViewModel.numberOfQuestions)",
+            value: $challengesViewModel.numberOfQuestions,
             in: 3 ... 20
           )
           Text("Any change will affect the next game")
@@ -124,4 +128,5 @@ struct SettingsView: View {
 
 #Preview {
   SettingsView()
+    .environmentObject(ChallengesViewModel())
 }

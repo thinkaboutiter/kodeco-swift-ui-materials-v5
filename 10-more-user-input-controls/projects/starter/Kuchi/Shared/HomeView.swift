@@ -52,10 +52,6 @@ struct HomeView: View {
         }
       })
       .tag(1)
-      .environment(
-        \.questionsPerSession,
-         challengesViewModel.numberOfQuestions
-      )
 
       SettingsView()
         .tabItem {
