@@ -34,7 +34,17 @@ import SwiftUI
 
 struct HomeView: View {
   var body: some View {
-    EmptyView()
+    TabView {
+      SettingsView()
+        .tabItem {
+          VStack {
+            Image(systemName: "gear")
+            Text("Settings")
+          }
+        }
+        .tag(2)
+    }
+    .tint(.orange)
   }
 }
 
