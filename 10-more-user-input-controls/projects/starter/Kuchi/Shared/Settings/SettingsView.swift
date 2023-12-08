@@ -49,12 +49,9 @@ struct SettingsView: View {
       Section(header: Text("Appearance")) {
         VStack(alignment: .leading) {
           Picker("", selection: $appearance) {
-            Text(Appearance.light.name)
-              .tag(Appearance.light)
-            Text(Appearance.dark.name)
-              .tag(Appearance.dark)
-            Text(Appearance.automatic.name)
-              .tag(Appearance.automatic)
+            ForEach(Appearance.allCases) { appearance in
+              Text(appearance.name).tag(appearance)
+            }
           }
           .pickerStyle(SegmentedPickerStyle())
           ColorPicker(
