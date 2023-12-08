@@ -38,11 +38,17 @@ struct SettingsView: View {
   var challengesViewModel: ChallengesViewModel
 
   @State var learningEnabled: Bool = true
-  @State var dailyReminderEnabled: Bool = false
+
+  @AppStorage("dailyReminderEnabled")
+  var dailyReminderEnabled = false
+
   @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
   @State var cardBackgroundColor: Color = .red
   @AppStorage("appearance")
   var appearance: Appearance = .automatic
+
+  @AppStorage("dailyReminderTime")
+  var dailyReminderTimeShadow: Double = 0
 
   var body: some View {
     List {
@@ -96,8 +102,12 @@ struct SettingsView: View {
             )
             .disabled(dailyReminderEnabled == false)
             .onChange(of: dailyReminderTime) { oldValue, newValue in
+              dailyReminderTimeShadow = newValue.timeIntervalSince1970
               configureNotification()
             }
+            .onAppear(perform: {
+              dailyReminderTime = Date(timeIntervalSince1970: dailyReminderTimeShadow)
+            })
           } else {
             DatePicker(
               // no need for label
@@ -108,8 +118,12 @@ struct SettingsView: View {
             .disabled(dailyReminderEnabled == false)
             .onChange(
               of: dailyReminderTime,
-              perform: { _ in
+              perform: { newValue in
+                dailyReminderTimeShadow = newValue.timeIntervalSince1970
                 configureNotification()
+            })
+            .onAppear(perform: {
+              dailyReminderTime = Date(timeIntervalSince1970: dailyReminderTimeShadow)
             })
           }
         }
