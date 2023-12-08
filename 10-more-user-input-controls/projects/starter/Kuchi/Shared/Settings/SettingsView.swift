@@ -37,6 +37,7 @@ struct SettingsView: View {
   @State var learningEnabled: Bool = true
   @State var dailyReminderEnabled: Bool = false
   @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
+  @State var cardBackgroundColor: Color = .red
 
   var body: some View {
     List {
@@ -45,6 +46,10 @@ struct SettingsView: View {
         .padding(.bottom, 8)
 
       Section(header: Text("Appearance")) {
+        ColorPicker(
+          "Card Background Color",
+          selection: $cardBackgroundColor
+        )
       }
 
       Section(header: Text("Game")) {
