@@ -34,11 +34,14 @@ import SwiftUI
 
 struct WelcomeView: View {
   @EnvironmentObject var userManager: UserManager
+  @EnvironmentObject var challengesViewModel: ChallengesViewModel
   @State var showPractice = false
   
   var body: some View {
     if showPractice {
       HomeView()
+        .environmentObject(userManager)
+        .environmentObject(challengesViewModel)
     } else {
       ZStack {
         WelcomeBackgroundImage()
