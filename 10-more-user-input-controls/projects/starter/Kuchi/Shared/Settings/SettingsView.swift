@@ -69,18 +69,31 @@ struct SettingsView: View {
               perform: { _ in
                 configureNotification()
               })
-          DatePicker(
-            // no need for label
-            "",
-            selection: $dailyReminderTime,
-            displayedComponents: .hourAndMinute
-          )
-          .disabled(dailyReminderEnabled == false)
-          .onChange(
-            of: dailyReminderTime,
-            perform: { _ in
+          if #available(iOS 17.0, *) {
+            DatePicker(
+              // no need for label
+              "",
+              selection: $dailyReminderTime,
+              displayedComponents: .hourAndMinute
+            )
+            .disabled(dailyReminderEnabled == false)
+            .onChange(of: dailyReminderTime) { oldValue, newValue in
               configureNotification()
-          })
+            }
+          } else {
+            DatePicker(
+              // no need for label
+              "",
+              selection: $dailyReminderTime,
+              displayedComponents: .hourAndMinute
+            )
+            .disabled(dailyReminderEnabled == false)
+            .onChange(
+              of: dailyReminderTime,
+              perform: { _ in
+                configureNotification()
+            })
+          }
         }
       }
     }
