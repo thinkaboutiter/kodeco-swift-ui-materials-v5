@@ -38,6 +38,7 @@ struct SettingsView: View {
   @State var dailyReminderEnabled: Bool = false
   @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
   @State var cardBackgroundColor: Color = .red
+  @State var appearance: Appearance = .automatic
 
   var body: some View {
     List {
@@ -46,10 +47,21 @@ struct SettingsView: View {
         .padding(.bottom, 8)
 
       Section(header: Text("Appearance")) {
-        ColorPicker(
-          "Card Background Color",
-          selection: $cardBackgroundColor
-        )
+        VStack(alignment: .leading) {
+          Picker("", selection: $appearance) {
+            Text(Appearance.light.name)
+              .tag(Appearance.light)
+            Text(Appearance.dark.name)
+              .tag(Appearance.dark)
+            Text(Appearance.automatic.name)
+              .tag(Appearance.automatic)
+          }
+          .pickerStyle(SegmentedPickerStyle())
+          ColorPicker(
+            "Card Background Color",
+            selection: $cardBackgroundColor
+          )
+        }
       }
 
       Section(header: Text("Game")) {
