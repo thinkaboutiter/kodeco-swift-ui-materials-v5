@@ -66,6 +66,9 @@
 		57F8DD6926EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
 		57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
 		B69F7A0C2B23623700A73A70 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0B2B23623700A73A70 /* LearnView.swift */; };
+		B69F7A0E2B23634100A73A70 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0D2B23634100A73A70 /* FlashCard.swift */; };
+		B69F7A0F2B23634600A73A70 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0B2B23623700A73A70 /* LearnView.swift */; };
+		B69F7A102B23634900A73A70 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0D2B23634100A73A70 /* FlashCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +107,7 @@
 		57EF341224E89F92004ABEB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
 		B69F7A0B2B23623700A73A70 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		B69F7A0D2B23634100A73A70 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +226,7 @@
 		57EF33FF24E89F91004ABEB2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B69F7A0A2B23621100A73A70 /* Leard */,
+				B69F7A0A2B23621100A73A70 /* Learn */,
 				57211E7726F69C9500F99E16 /* Practice */,
 				576942A326EF720D004B8191 /* Profile */,
 				57B1E5C026FB37BF004C8862 /* Settings */,
@@ -263,12 +267,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		B69F7A0A2B23621100A73A70 /* Leard */ = {
+		B69F7A0A2B23621100A73A70 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
 				B69F7A0B2B23623700A73A70 /* LearnView.swift */,
+				B69F7A0D2B23634100A73A70 /* FlashCard.swift */,
 			);
-			path = Leard;
+			path = Learn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +403,7 @@
 				57211E8B26F69C9500F99E16 /* ChoicesRow.swift in Sources */,
 				57578FDE24E9D943003465A4 /* HomeView.swift in Sources */,
 				57B1E5BA26FB3252004C8862 /* Color+Extension.swift in Sources */,
+				B69F7A0E2B23634100A73A70 /* FlashCard.swift in Sources */,
 				57B1E5C526FB38D5004C8862 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +428,7 @@
 				57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				576942AC26EF720D004B8191 /* Settings.swift in Sources */,
 				57211E8426F69C9500F99E16 /* CongratulationsView.swift in Sources */,
+				B69F7A0F2B23634600A73A70 /* LearnView.swift in Sources */,
 				57211E8226F69C9500F99E16 /* QuestionView.swift in Sources */,
 				57211E9226F69C9F00F99E16 /* StarterView.swift in Sources */,
 				57211E8A26F69C9500F99E16 /* ChallengeView.swift in Sources */,
@@ -431,6 +438,7 @@
 				57211E8C26F69C9500F99E16 /* ChoicesRow.swift in Sources */,
 				57578FDF24E9D943003465A4 /* HomeView.swift in Sources */,
 				57B1E5BB26FB3252004C8862 /* Color+Extension.swift in Sources */,
+				B69F7A102B23634900A73A70 /* FlashCard.swift in Sources */,
 				57B1E5C626FB38D5004C8862 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
