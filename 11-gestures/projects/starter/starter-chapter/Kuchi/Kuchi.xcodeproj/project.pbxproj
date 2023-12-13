@@ -65,6 +65,8 @@
 		57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF340024E89F91004ABEB2 /* KuchiApp.swift */; };
 		57F8DD6926EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
 		57F8DD6A26EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */; };
+		B6891C762B29D782004CF069 /* FlashDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6891C752B29D782004CF069 /* FlashDeck.swift */; };
+		B6891C772B29D782004CF069 /* FlashDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6891C752B29D782004CF069 /* FlashDeck.swift */; };
 		B69F7A0C2B23623700A73A70 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0B2B23623700A73A70 /* LearnView.swift */; };
 		B69F7A0E2B23634100A73A70 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0D2B23634100A73A70 /* FlashCard.swift */; };
 		B69F7A0F2B23634600A73A70 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F7A0B2B23623700A73A70 /* LearnView.swift */; };
@@ -106,6 +108,7 @@
 		57EF341124E89F92004ABEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EF341224E89F92004ABEB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		57F8DD6826EEC01300153B9F /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
+		B6891C752B29D782004CF069 /* FlashDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashDeck.swift; sourceTree = "<group>"; };
 		B69F7A0B2B23623700A73A70 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		B69F7A0D2B23634100A73A70 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +275,7 @@
 			children = (
 				B69F7A0B2B23623700A73A70 /* LearnView.swift */,
 				B69F7A0D2B23634100A73A70 /* FlashCard.swift */,
+				B6891C752B29D782004CF069 /* FlashDeck.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -405,6 +409,7 @@
 				57B1E5BA26FB3252004C8862 /* Color+Extension.swift in Sources */,
 				B69F7A0E2B23634100A73A70 /* FlashCard.swift in Sources */,
 				57B1E5C526FB38D5004C8862 /* SettingsView.swift in Sources */,
+				B6891C762B29D782004CF069 /* FlashDeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +445,7 @@
 				57B1E5BB26FB3252004C8862 /* Color+Extension.swift in Sources */,
 				B69F7A102B23634900A73A70 /* FlashCard.swift in Sources */,
 				57B1E5C626FB38D5004C8862 /* SettingsView.swift in Sources */,
+				B6891C772B29D782004CF069 /* FlashDeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
